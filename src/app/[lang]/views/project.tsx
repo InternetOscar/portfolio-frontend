@@ -49,9 +49,9 @@ export default function Project({ data }: { data: Project }) {
                 <Image
                     src={imageUrl}
                     alt="article cover image"
-                    width={200}
-                    height={500}
-                    className="mx-auto object-cover rounded-lg"
+                    width={800}
+                    height={800}
+                    className="mx-auto object-cover rounded-lg w-2/4"
                     priority={true}
                 />
             )}
