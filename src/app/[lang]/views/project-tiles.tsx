@@ -50,7 +50,7 @@ export default function ProjectList({
                   <span>{project.attributes.name}</span>
                 </div>
                 <div className='rounded m-2 aspect-square'>
-                  <Image src={imageUrl} width={window.innerWidth / 3} height={window.innerWidth / 3} alt='surf' className='aspect-square object-cover right-0 rounded-lg'/>
+                  <Image src={imageUrl} width={1000} height={1000} alt='surf' className='aspect-square object-cover right-0 rounded-lg'/>
                 </div>
             </Link>
           );

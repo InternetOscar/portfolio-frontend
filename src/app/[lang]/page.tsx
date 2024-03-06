@@ -185,19 +185,7 @@ export default function RootRoute() {
                   <Image src={getStrapiMedia('/uploads/61fdr_Eu_P_Jw_L_AC_UF_1000_1000_QL_80_d9391d2da2.jpg')} width={200} height={500} alt='surf' className='rounded-md'/>
                 </div>
             </Link>
-      {/* <Link
-            href={`/projects/${twoProjectTiles.attributes.slug}`}
-            key={project.id}
-            className="col-span-2 grid grid-cols-2 gap-2.5 rounded-xl bg-neutral-100 border border-neutral-100 hover:border-neutral-300 dark:hover:border-neutral-500 dark:bg-neutral-800 dark:border-neutral-700 transition-all"
-          >
-            <div className='font-body px-3 py-2 font-light text-neutral-700 dark:text-neutral-400 aspect-square'>
-              <span>{project.attributes.name}</span>
-            </div>
-            <div className='rounded m-2 aspect-square'>
-              <Image src={imageUrl} width={window.innerWidth / 3} height={window.innerWidth / 3} alt='surf' className='aspect-square object-cover right-0 rounded-lg'/>
-            </div>
 
-          </Link> */}
       <div className='col-span-1 grid grid-cols-1 rounded-xl aspect-square dark:border-neutral-700 dark:hover:border-neutral-500 transition-all overflow-hidden'>
         <span className='font-body mt-2 ml-3 absolute text-neutral-100 font-light'>Shot on iPhone</span>
         <div className='overflow-hidden'>
@@ -212,7 +200,7 @@ export default function RootRoute() {
           <span>FireDanger</span>
         </div>
         <div className='rounded m-2 aspect-square'>
-          <Image src={getStrapiMedia('/uploads/Bendito_Mockup_MT_Iphone_01_7061d1b7e1.png')} width={window.innerWidth / 3} height={window.innerWidth / 3} alt='surf' className='aspect-square object-cover right-0 rounded-lg'/>
+          <Image src={getStrapiMedia('/uploads/Bendito_Mockup_MT_Iphone_01_7061d1b7e1.png')} width={1000} height={1000} alt='surf' className='aspect-square object-cover right-0 rounded-lg'/>
           </div>
       </Link>
       <div className='col-span-1 grid grid-cols-1 rounded-xl aspect-square transition-all overflow-hidden'>
