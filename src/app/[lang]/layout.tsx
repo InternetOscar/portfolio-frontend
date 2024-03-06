@@ -25,10 +25,10 @@ export default async function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
         <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inclusive+Sans:ital@0;1&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
       </head>
-      <body className="w-screen overflow-x-hidden bg-neutral-50 dark:bg-neutral-900 antialiased">
+      <body className="w-screen overflow-x-hidden bg-neutral-50 dark:bg-black md:dark:bg-neutral-900 antialiased">
         <Navbar/>
 
-        <main className="min-h-screen md:mx-[40px] md:my-[20px] mx-[10px]">
+        <main className="min-h-screen md:mx-[40px] md:my-[20px] mx-[10px] my-3">
           {children}
         </main>
 
