@@ -173,7 +173,7 @@ export default function RootRoute() {
           <span>FireDanger</span>
         </div>
         <div className='rounded m-2 aspect-square'>
-          <Image src={getStrapiMedia('/uploads/Bendito_Mockup_MT_Iphone_01_7061d1b7e1.png')} width={window.innerWidth / 3} height={window.innerWidth / 3} alt='surf' className='aspect-square object-cover right-0 rounded-lg'/>
+          <Image src={getStrapiMedia('/uploads/Bendito_Mockup_MT_Iphone_01_7061d1b7e1.png')} width={1000} height={1000} alt='surf' className='aspect-square object-cover right-0 rounded-lg'/>
           </div>
       </Link>
       <Link
