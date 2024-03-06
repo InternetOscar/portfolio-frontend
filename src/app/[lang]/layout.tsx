@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { getStrapiMedia, getStrapiURL } from "./utils/api-helpers";
 import { fetchAPI } from "./utils/fetch-api";
+import { Analytics } from "@vercel/analytics/react"
 
 import { i18n } from "../../../i18n-config";
 import Footer from "./components/Footer";
@@ -33,6 +34,7 @@ export default async function RootLayout({
         </main>
 
         <Footer></Footer>
+        <Analytics/>
       </body>
     </html>
   );
