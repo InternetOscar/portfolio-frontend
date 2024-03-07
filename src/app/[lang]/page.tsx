@@ -17,146 +17,6 @@ interface Meta {
   };
 }
 
-function GetBooks() {
-  const [meta, setMeta] = useState<Meta | undefined>();
-  const [data, setData] = useState<any>([]);
-  const [isLoading, setLoading] = useState(true);
-
-
-  const fetchData = useCallback(async (start: number, limit: number) => {
-    setLoading(true);
-    try {
-      const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
-      const path = `/books`;
-      const urlParamsObject = {
-        sort: { createdAt: "desc" },
-        populate: {
-          cover: { fields: ["url"] },
-          category: { populate: "*" },
-          authorsBio: {
-            populate: "*",
-          },
-        },
-        pagination: {
-          start: start,
-          limit: limit,
-        },
-      };
-      const options = { headers: { Authorization: `Bearer ${token}` } };
-      const responseData = await fetchAPI(path, urlParamsObject, options);
-
-      // console.log("Response Data:", responseData)
-      // console.log("urlParamsObject", urlParamsObject)
-
-      if (start === 0) {
-        setData(responseData.data);
-      } else {
-        setData((prevData: any[] ) => [...prevData, ...responseData.data]);
-      }
-
-      setMeta(responseData.meta);
-    } catch (error) {
-      console.error(error);
-    } finally {
-      setLoading(false);
-    }
-  }, []);
-
-  function loadMorePosts(): void {
-    const nextPosts = meta!.pagination.start + meta!.pagination.limit;
-    fetchData(nextPosts, Number(process.env.NEXT_PUBLIC_PAGE_LIMIT));
-  }
-
-  useEffect(() => {
-    fetchData(0, Number(process.env.NEXT_PUBLIC_PAGE_LIMIT));
-  }, [fetchData]);
-
-  if (isLoading) return <Loader />;
-
-  let twoBookTiles = []
-  let b = 0
-  while (b < 2 ) {
-    twoBookTiles.push(data[b])
-    b++;
-  }
-
-  // console.log(twoBookTiles)
-
-  return (
-    <Books data={twoBookTiles}></Books>
-  );
-}
-
-let twoProjectTiles =[]
-
-function GetProjects() {
-  const [meta, setMeta] = useState<Meta | undefined>();
-  const [data, setData] = useState<any>([]);
-  const [isLoading, setLoading] = useState(true);
-
-
-  const fetchData = useCallback(async (start: number, limit: number) => {
-    setLoading(true);
-    try {
-      const token = process.env.NEXT_PUBLIC_STRAPI_API_TOKEN;
-      const path = `/projects`;
-      const urlParamsObject = {
-        sort: { createdAt: "desc" },
-        populate: {
-          cover: { fields: ["url"] },
-          category: { populate: "*" },
-          authorsBio: {
-            populate: "*",
-          },
-        },
-        pagination: {
-          start: start,
-          limit: limit,
-        },
-      };
-      const options = { headers: { Authorization: `Bearer ${token}` } };
-      const responseData = await fetchAPI(path, urlParamsObject, options);
-
-      //
-
-      if (start === 0) {
-        setData(responseData.data);
-      } else {
-        setData((prevData: any[] ) => [...prevData, ...responseData.data]);
-      }
-
-      setMeta(responseData.meta);
-    } catch (error) {
-      console.error(error);
-    } finally {
-      setLoading(false);
-    }
-  }, []);
-
-
-  useEffect(() => {
-    fetchData(0, Number(process.env.NEXT_PUBLIC_PAGE_LIMIT));
-  }, [fetchData]);
-
-  if (isLoading) return <Loader />;
-  let twoProjectTiles = []
-
-  let p = 0
-  while (p < 2 ) {
-    // console.log(p)
-    // console.log("Project Data:", data[p])
-    twoProjectTiles.push(data[p])
-    // console.log(twoProjectTiles)
-    p++;
-  }
-
-  // console.log("Project Array", twoProjectTiles)
-
-  return (
-    <Projects data={twoProjectTiles}></Projects>
-  );
-}
-
 export default function RootRoute() {
   return (
     <>
@@ -175,7 +35,7 @@ export default function RootRoute() {
             <span>FireDanger</span>
           </div>
           <div className='rounded m-2 aspect-square'>
-            <Image src={getStrapiMedia('/uploads/Bendito_Mockup_MT_Iphone_01_7061d1b7e1.png')} width={1000} height={1000} alt='surf' className='aspect-square object-cover right-0 rounded-lg md:p-0'/>
+            <Image priority src={getStrapiMedia('/uploads/Bendito_Mockup_MT_Iphone_01_7061d1b7e1.png')} width={1000} height={1000} alt='surf' className='aspect-square object-cover right-0 rounded-lg md:p-0'/>
           </div>
         </Link>
       </div>
@@ -194,7 +54,7 @@ export default function RootRoute() {
         <div className='col-span-1 md:col-span-1 grid grid-cols-1 row-span-1 rounded-xl aspect-square dark:border-neutral-700 dark:hover:border-neutral-500 transition-all overflow-hidden'>
           <span className='font-body mt-2 ml-3 absolute text-neutral-100 font-light'>Shot on iPhone</span>
           <div className='overflow-hidden'>
-            <Image src={getStrapiMedia('/uploads/IMG_5743_cd7cb3f137.webp')} priority width={400} height={400} alt='sheep grazing in a field illuminated by golden sunset light' className='w-full md:aspect-square rounded-md object-cover right-0'/>
+            <Image src={getStrapiMedia('/uploads/IMG_5743_cd7cb3f137.webp')} priority width={500} height={500} alt='sheep grazing in a field illuminated by golden sunset light' className='w-full md:aspect-square rounded-md object-cover right-0'/>
           </div>
         </div>
       </div>

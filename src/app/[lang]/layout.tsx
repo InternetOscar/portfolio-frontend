@@ -10,8 +10,32 @@ import Navbar from "./components/Navbar";
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
+import { Inter, Roboto_Mono, Work_Sans, Fraunces } from 'next/font/google'
+
+const fraunces = Fraunces({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-fraunces',
+})
+
+const work = Work_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-work',
+})
 
 
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+})
+
+const roboto_mono = Roboto_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-roboto-mono',
+})
 
 export default async function RootLayout({
   children,
@@ -22,12 +46,12 @@ export default async function RootLayout({
 }) {
 
   return (
-    <html lang={params.lang}>
+    <html lang={params.lang} className={`${inter.variable} ${roboto_mono.variable} ${fraunces.variable} ${work.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        {/* <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
-        <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inclusive+Sans:ital@0;1&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inclusive+Sans:ital@0;1&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/> */}
       </head>
       <body className="w-screen overflow-x-hidden bg-neutral-50 dark:bg-black md:dark:bg-neutral-900 antialiased">
         <Navbar/>
