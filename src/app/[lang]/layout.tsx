@@ -24,6 +24,7 @@ export default async function RootLayout({
   return (
     <html lang={params.lang}>
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
         <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inclusive+Sans:ital@0;1&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
