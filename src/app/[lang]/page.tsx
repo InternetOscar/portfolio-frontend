@@ -24,11 +24,11 @@ export default function RootRoute() {
         href={`/projects/firedanger`}
         className="col-span-2 md:col-span-2 grid row-span-1 grid-cols-2 gap-2.5 rounded-xl bg-neutral-200/50 border border-neutral-100 hover:border-neutral-300 dark:hover:border-neutral-500 dark:bg-neutral-800 dark:border-neutral-700 transition-all"
         >
-          <div className='font-body px-3 py-2 font-light text-neutral-700 dark:text-neutral-400 aspect-square'>
+          <div className='font-body px-3 py-2  text-neutral-700 dark:text-neutral-400 aspect-square'>
             <span>FireDanger</span>
           </div>
           <div className='rounded m-2 aspect-square'>
-            <Image priority src={getStrapiMedia('/uploads/Bendito_Mockup_MT_Iphone_01_7061d1b7e1.png')} width={500} height={500} alt='surf' className='aspect-square object-cover right-0 rounded-lg md:p-0'/>
+            <Image priority src={getStrapiMedia('/uploads/firedanger_a911524bcd.png')} width={500} height={500} alt='surf' className='aspect-square object-cover right-0 rounded-lg md:p-0'/>
           </div>
         </Link>
       </div>
@@ -37,7 +37,7 @@ export default function RootRoute() {
           className='col-span-1 row-span-1 md:col-span-1 aspect-square row-span-1 flex flex-col p-2 rounded-xl bg-neutral-200/50 dark:bg-neutral-800 dark:border-neutral-700 md:aspect-square border border-neutral-100 hover:border-neutral-300 dark:hover:border-neutral-500 transition-all'
           href={`/books/thinking-fast-and-slow`}
         >
-          <span className='font-body pb-2 pl-1 text-neutral-700 dark:text-neutral-400 font-light line-clamp-2'>The 48 Laws of Power</span>
+          <span className='font-body pb-2 pl-1 text-neutral-700 dark:text-neutral-400  line-clamp-2'>The 48 Laws of Power</span>
             <div className='overflow-hidden w-1/3 object-scale-down m-auto'>
               <Image src={getStrapiMedia('/uploads/48_laws_of_power_cd02854f46.jpg')} width={200} height={500} alt='surf' className='rounded-md'/>
             </div>
@@ -45,9 +45,9 @@ export default function RootRoute() {
       </div>
       <div className='col-span-1 row-span-1 aspect-square'>
         <div className='col-span-1 md:col-span-1 grid grid-cols-1 row-span-1 rounded-xl aspect-square dark:border-neutral-700 dark:hover:border-neutral-500 transition-all overflow-hidden'>
-          <span className='font-body mt-2 ml-3 absolute text-neutral-100 font-light'>Shot on iPhone</span>
+          <span className='font-body mt-2 ml-3 absolute text-neutral-100 '>Shot on iPhone</span>
           <div className='overflow-hidden'>
-            <Image src={getStrapiMedia('/uploads/IMG_5743_cd7cb3f137.webp')} priority width={500} height={500} alt='sheep grazing in a field illuminated by golden sunset light' className='w-full md:aspect-square rounded-md object-cover right-0'/>
+            <Image src={getStrapiMedia('/uploads/IMG_5743_cd7cb3f137.webp')} priority width={500} height={500} alt='sheep grazing in a field illuminated by golden sunset light' className='fill={true} md:aspect-square rounded-md object-cover right-0'/>
           </div>
         </div>
       </div>
@@ -56,17 +56,17 @@ export default function RootRoute() {
         href={`/projects/library-quiz`}
         className="col-span-2 md:col-span-2 grid row-span-1 grid-cols-2 gap-2.5 rounded-xl bg-neutral-200/50 border border-neutral-100 hover:border-neutral-300 dark:hover:border-neutral-500 dark:bg-neutral-800 dark:border-neutral-700 transition-all"
         >
-          <div className='font-body px-3 py-2 font-light text-neutral-700 dark:text-neutral-400 aspect-square'>
+          <div className='font-body px-3 py-2  text-neutral-700 dark:text-neutral-400 aspect-square'>
             <span>Library Scavenger Hunt</span>
           </div>
           <div className='rounded m-2 aspect-square'>
-            <Image src={getStrapiMedia('/uploads/Lib_Mockup_sml_f4cd187c3a.png')} width={500} height={500} alt='surf' className='aspect-square object-cover right-0 rounded-lg md:p-0 '/>
+            <Image src={getStrapiMedia('/uploads/tafe_library_mockup_d733c19ebf.webp')} width={400} height={400} alt='surf' className='aspect-square w-full object-cover right-0 rounded-lg md:p-0 '/>
           </div>
         </Link>
       </div>
       <div className='col-span-1 aspect-square'>
         <div className='col-span-1 md:col-span-1 grid grid-cols-1 row-span-1 rounded-xl aspect-square dark:border-neutral-700 dark:hover:border-neutral-500 transition-all overflow-hidden'>
-          <span className='font-body mt-2 ml-3 absolute text-neutral-100 font-light'>Shot on iPhone</span>
+          <span className='font-body mt-2 ml-3 absolute text-neutral-100 '>Shot on iPhone</span>
           <div className='overflow-hidden'>
             <Image src={getStrapiMedia('/uploads/IMG_4369_831421e761.webp')} priority width={400} height={400} alt='sheep grazing in a field illuminated by golden sunset light' className='w-full md:aspect-square rounded-md object-cover right-0'/>
           </div>
@@ -77,7 +77,7 @@ export default function RootRoute() {
           className='col-span-1 row-span-1 md:col-span-1 aspect-square row-span-1 flex flex-col p-2 rounded-xl bg-neutral-200/50 dark:bg-neutral-800 dark:border-neutral-700 md:aspect-square border border-neutral-100 hover:border-neutral-300 dark:hover:border-neutral-500 transition-all'
           href={`/books/thinking-fast-and-slow`}
         >
-          <span className='font-body pb-2 pl-1 text-neutral-700 dark:text-neutral-400 font-light line-clamp-2'>Thinking Fast and Slow</span>
+          <span className='font-body pb-2 pl-1 text-neutral-700 dark:text-neutral-400  line-clamp-2'>Thinking Fast and Slow</span>
             <div className='overflow-hidden w-1/3 object-scale-down m-auto'>
               <Image src={getStrapiMedia('/uploads/61fdr_Eu_P_Jw_L_AC_UF_1000_1000_QL_80_d9391d2da2.jpg')} width={200} height={500} alt='surf' className='rounded-md'/>
             </div>
