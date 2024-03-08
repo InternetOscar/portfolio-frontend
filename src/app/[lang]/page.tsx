@@ -28,7 +28,7 @@ export default function RootRoute() {
             <span>FireDanger</span>
           </div>
           <div className='rounded m-2 aspect-square'>
-            <Image priority src={getStrapiMedia('/uploads/Bendito_Mockup_MT_Iphone_01_7061d1b7e1.png')} width={1000} height={1000} alt='surf' className='aspect-square object-cover right-0 rounded-lg md:p-0'/>
+            <Image priority src={getStrapiMedia('/uploads/Bendito_Mockup_MT_Iphone_01_7061d1b7e1.png')} width={500} height={500} alt='surf' className='aspect-square object-cover right-0 rounded-lg md:p-0'/>
           </div>
         </Link>
       </div>
@@ -60,7 +60,7 @@ export default function RootRoute() {
             <span>Library Scavenger Hunt</span>
           </div>
           <div className='rounded m-2 aspect-square'>
-            <Image src={getStrapiMedia('/uploads/Lib_Mockup_sml_f4cd187c3a.png')} width={1000} height={1000} alt='surf' className='aspect-square object-cover right-0 rounded-lg md:p-0 '/>
+            <Image src={getStrapiMedia('/uploads/Lib_Mockup_sml_f4cd187c3a.png')} width={500} height={500} alt='surf' className='aspect-square object-cover right-0 rounded-lg md:p-0 '/>
           </div>
         </Link>
       </div>
