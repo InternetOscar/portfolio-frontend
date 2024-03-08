@@ -39,7 +39,7 @@ export default function RootRoute() {
         >
           <span className='font-body pb-2 pl-1 text-neutral-700 dark:text-neutral-400  line-clamp-2'>The 48 Laws of Power</span>
             <div className='overflow-hidden w-1/3 object-scale-down m-auto'>
-              <Image src={getStrapiMedia('/uploads/48_laws_of_power_cd02854f46.jpg')} width={200} height={500} alt='surf' className='rounded-md'/>
+              <Image src={getStrapiMedia('/uploads/48_laws_of_power_cd02854f46.jpg')} width={100} height={200} alt='surf' className='w-full rounded-md'/>
             </div>
         </Link>
       </div>
@@ -79,7 +79,7 @@ export default function RootRoute() {
         >
           <span className='font-body pb-2 pl-1 text-neutral-700 dark:text-neutral-400  line-clamp-2'>Thinking Fast and Slow</span>
             <div className='overflow-hidden w-1/3 object-scale-down m-auto'>
-              <Image src={getStrapiMedia('/uploads/61fdr_Eu_P_Jw_L_AC_UF_1000_1000_QL_80_d9391d2da2.jpg')} width={200} height={500} alt='surf' className='rounded-md'/>
+              <Image src={getStrapiMedia('/uploads/61fdr_Eu_P_Jw_L_AC_UF_1000_1000_QL_80_d9391d2da2.jpg')} width={100} height={200} alt='surf' className='w-full rounded-md'/>
             </div>
         </Link>
       </div>
