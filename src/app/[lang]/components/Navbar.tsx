@@ -1,13 +1,9 @@
 "use client";
-import Logo from "./Logo";
 import Link from "next/link";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import { useState } from "react";
 
 import { usePathname } from "next/navigation";
 
 const Links = [
-  // {title: "Oscar", href: ""},
   {title: "Projects", href: "projects"},
   {title: "Books", href: "books"},
   {title: "Blog", href: "blog"},
@@ -40,7 +36,5 @@ export default function Navbar() {
         <Link className="mx-3 hover:text-neutral-800 transition-all mt-[-4px]" target="_blank" href="https://docs.google.com/viewer?url=https://raw.githubusercontent.com/internetoscar/cv/main/2024resume.pdf">CV</Link>
       </div>
     </div>
-    // <div className="sticky fixed flex flex-row bottom-3 top-3 text-neutral-400 m-[32px] px-3 font-body font-light z-10 w-full">
-    // </div>
   );
 }
