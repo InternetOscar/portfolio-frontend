@@ -48,6 +48,7 @@ export default async function RootLayout({
   return (
     <html lang={params.lang} className={`${inter.variable} ${roboto_mono.variable} ${fraunces.variable} ${work.variable}`}>
       <head>
+        <title>Oscar Dobson-Brown — Web Developer</title>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         {/* <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
