@@ -1,4 +1,4 @@
-import { fetchAPI } from "@/app/[lang]/utils/fetch-api";
+import { fetchAPI } from "@/app/utils/fetch-api";
 
 async function fetchSideMenuData(filter: string) {
   try {
@@ -72,7 +72,7 @@ export default async function LayoutRoute({
   const { categories, articles } = (await fetchSideMenuData(category)) as Data;
 
   return (
-    <section className="col-span-2 md:col-start-2 grid grid-cols-2">
+    <section className="col-span-4 md:col-span-2 md:col-start-2 grid grid-cols-2">
         <div className="col-span-2">{children}</div>
     </section>
   );

@@ -3,7 +3,7 @@ import "./globals.css";
 import { getStrapiMedia, getStrapiURL } from "./utils/api-helpers";
 import { fetchAPI } from "./utils/fetch-api";
 
-import { i18n } from "../../../i18n-config";
+import { i18n } from "../../i18n-config";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 
@@ -46,7 +46,7 @@ export default async function RootLayout({
 }) {
 
   return (
-    <html lang={params.lang} className={`${inter.variable} ${roboto_mono.variable} ${fraunces.variable} ${work.variable}`}>
+    <html lang='en' className={`${fraunces.variable} ${work.variable}`}>
       <head>
         <title>Oscar Dobson-Brown — Web Developer</title>
         <link rel="icon" href="/favicon.ico" sizes="any" />
