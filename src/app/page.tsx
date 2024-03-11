@@ -28,7 +28,7 @@ export default function RootRoute() {
             <span>FireDanger</span>
           </div>
           <div className='rounded m-2 aspect-square'>
-            <Image priority src={getStrapiMedia('/uploads/firedanger_a911524bcd.png')} width={500} height={500} alt='surf' className='aspect-square object-cover right-0 rounded-lg md:p-0'/>
+            <Image priority src={getStrapiMedia('https://strapi-aws-s3-assets.s3.ap-southeast-2.amazonaws.com/firedanger_b310997e95.png')} width={500} height={500} alt='surf' className='aspect-square object-cover right-0 rounded-lg md:p-0'/>
           </div>
         </Link>
       </div>
@@ -39,7 +39,7 @@ export default function RootRoute() {
         >
           <span className='font-body pb-2 pl-1 text-neutral-700 dark:text-neutral-400  line-clamp-2'>The 48 Laws of Power</span>
             <div className='overflow-hidden w-1/3 object-scale-down m-auto'>
-              <Image src={getStrapiMedia('/uploads/48_laws_of_power_cd02854f46.jpg')} width={100} height={200} alt='surf' className='w-full rounded-md'/>
+              <Image src={getStrapiMedia('https://strapi-aws-s3-assets.s3.ap-southeast-2.amazonaws.com/48_laws_of_power_a13963c526.jpg')} width={100} height={200} alt='surf' className='w-full rounded-md'/>
             </div>
         </Link>
       </div>
@@ -47,7 +47,7 @@ export default function RootRoute() {
         <div className='col-span-1 md:col-span-1 grid grid-cols-1 row-span-1 rounded-xl aspect-square dark:border-neutral-700 dark:hover:border-neutral-500 transition-all overflow-hidden'>
           <span className='font-body mt-2 ml-3 absolute text-neutral-100 '>Shot on iPhone</span>
           <div className='overflow-hidden'>
-            <Image src={getStrapiMedia('/uploads/IMG_5743_cd7cb3f137.webp')} priority width={500} height={500} alt='sheep grazing in a field illuminated by golden sunset light' className='fill={true} md:aspect-square rounded-md object-cover right-0'/>
+            <Image src={getStrapiMedia('https://strapi-aws-s3-assets.s3.ap-southeast-2.amazonaws.com/IMG_5743_add101f162.webp')} priority width={500} height={500} alt='sheep grazing in a field illuminated by golden sunset light' className='fill={true} md:aspect-square rounded-md object-cover right-0'/>
           </div>
         </div>
       </div>
@@ -60,7 +60,7 @@ export default function RootRoute() {
             <span>Library Scavenger Hunt</span>
           </div>
           <div className='rounded m-2 aspect-square'>
-            <Image src={getStrapiMedia('/uploads/tafe_library_mockup_d733c19ebf.webp')} width={400} height={400} alt='surf' className='aspect-square w-full object-cover right-0 rounded-lg md:p-0 '/>
+            <Image src={getStrapiMedia('/uploads/Lib_Mockup_2f5ec0fdbd.png')} width={400} height={400} alt='surf' className='aspect-square w-full object-cover right-0 rounded-lg md:p-0 '/>
           </div>
         </Link>
       </div>
@@ -68,7 +68,7 @@ export default function RootRoute() {
         <div className='col-span-1 md:col-span-1 grid grid-cols-1 row-span-1 rounded-xl aspect-square dark:border-neutral-700 dark:hover:border-neutral-500 transition-all overflow-hidden'>
           <span className='font-body mt-2 ml-3 absolute text-neutral-100 '>Shot on iPhone</span>
           <div className='overflow-hidden'>
-            <Image src={getStrapiMedia('/uploads/IMG_4369_831421e761.webp')} priority width={400} height={400} alt='sheep grazing in a field illuminated by golden sunset light' className='w-full md:aspect-square rounded-md object-cover right-0'/>
+            <Image src={getStrapiMedia('https://strapi-aws-s3-assets.s3.ap-southeast-2.amazonaws.com/IMG_4369_1dd10386b2.webp')} priority width={400} height={400} alt='sheep grazing in a field illuminated by golden sunset light' className='w-full md:aspect-square rounded-md object-cover right-0'/>
           </div>
         </div>
       </div>
@@ -79,14 +79,14 @@ export default function RootRoute() {
         >
           <span className='font-body pb-2 pl-1 text-neutral-700 dark:text-neutral-400  line-clamp-2'>Thinking Fast and Slow</span>
             <div className='overflow-hidden w-1/3 object-scale-down m-auto'>
-              <Image src={getStrapiMedia('/uploads/61fdr_Eu_P_Jw_L_AC_UF_1000_1000_QL_80_d9391d2da2.jpg')} width={100} height={200} alt='surf' className='w-full rounded-md'/>
+              <Image src={getStrapiMedia('https://strapi-aws-s3-assets.s3.ap-southeast-2.amazonaws.com/61fdr_Eu_P_Jw_L_AC_UF_1000_1000_QL_80_0a3905c6f5.jpg')} width={100} height={200} alt='surf' className='w-full rounded-md'/>
             </div>
         </Link>
       </div>
     </div>
     <div className='h-[500px] col-span-4  flex flex-center'>
           <div className='m-auto w-[200px] flex flex-col justify-center'>
-            <Image className="" src={getStrapiMedia("/uploads/avatar_2e103b1f70.png")} alt='Memoji of Oscar Dobson-Brown' width={200} height={200}/>
+            <Image className="" src={getStrapiMedia("https://strapi-aws-s3-assets.s3.ap-southeast-2.amazonaws.com/avatar_fa24b1d38b.png")} alt='Memoji of Oscar Dobson-Brown' width={200} height={200}/>
             <p className='justify-center font-body text-center w-full dark:text-neutral-300 '>Built by Oscar.</p>
           </div>
         </div>

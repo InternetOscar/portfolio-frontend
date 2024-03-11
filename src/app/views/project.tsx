@@ -37,25 +37,27 @@ export default function Project({ data }: { data: Project }) {
                 <div className="flex flex-col items-start justify-between w-full md:flex-row md:items-center dark:text-gray-400">
                     <div className="flex items-center md:space-x-2">
 
-                        <p className="text-sm font-light">
+                        <p className="font-body text-sm">
                             The stack: {product_a}, {product_b}, {product_c}
                         </p>
                     </div>
                 </div>
                 <p className='font-display font-light dark:text-white'>{description}</p>
             </div>
-            <div>
+            <div className='w-2/4 mx-auto'>
             {imageUrl && (
                 <Image
                     src={imageUrl}
                     alt="article cover image"
                     width={800}
                     height={800}
-                    className="mx-auto object-cover rounded-lg w-2/4"
+                    className="w-full object-cover aspect-square rounded-lg"
                     priority={true}
                 />
             )}
-            <div className='font-body w-full flex justify-center mt-[20px] dark:text-white'><Link href={url} target='_blank' className='border rounded-lg hover:border-neutral-500 transition-all px-5 py-2'>View Project</Link></div>
+            <div className='font-body w-full flex justify-center mt-[20px] dark:text-white'>
+                <Link href={url} target='_blank' className='border rounded-lg hover:border-neutral-500 transition-all px-5 py-2'>View Project</Link>
+            </div>
             </div>
 
         </article>

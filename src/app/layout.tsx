@@ -24,18 +24,10 @@ const work = Work_Sans({
   variable: '--font-work',
 })
 
-
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter',
-})
-
-const roboto_mono = Roboto_Mono({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-roboto-mono',
-})
+export const metadata: Metadata = {
+  title: 'Oscar Dobson-Brown - Web Developer in Perth',
+  description: '...'
+}
 
 export default async function RootLayout({
   children,
@@ -48,7 +40,7 @@ export default async function RootLayout({
   return (
     <html lang='en' className={`${fraunces.variable} ${work.variable}`}>
       <head>
-        <title>Oscar Dobson-Brown — Web Developer</title>
+        {/* <title>Oscar Dobson-Brown — Web Developer</title> */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         {/* <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
