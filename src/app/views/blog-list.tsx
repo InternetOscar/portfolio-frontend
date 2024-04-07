@@ -64,7 +64,7 @@ export default function PostList({
     var date = String(formatDate(articles[p].attributes.publishedAt))
     console.log(title, link, date)
     postObj = { ...postObj, "title": title, "link": link, "date": date, "year": year }
-    // console.log(postObj) 
+    // console.log(postObj)
     tidyPosts.push(postObj)
     // articles.filter()
   }
@@ -73,15 +73,15 @@ export default function PostList({
   let uniqueYears = Array.from(uniqueYearsSet)
   console.log(uniqueYears)
   console.log("Tidy Posts:",tidyPosts)
-  console.log("Example Date:", tidyPosts[0].date)
+  console.log("Example Date:", tidyPosts[0])
 
   // const yearGroup = tidyPosts.filter(post => parseInt(post.year) == year)
 
-  console.log(yearGroup)
+  // console.log(yearGroup)
 
   return (
     <div className="font-body font-normal col-span-4 grid grid-cols-4 mt-8 divide-y divide-neutral-200 dark:divide-neutral-800 border-t border-neutral-200 dark:border-neutral-800">
-      <div className="col-span-4 grid grid-cols-4">
+      {/* <div className="col-span-4 grid grid-cols-4">
         {uniqueYears.map(year => (
           <div>
           <p className="text-sm p-4 m-0 dark:text-neutral-300 text-blue-600">{year}</p>
@@ -91,7 +91,7 @@ export default function PostList({
           </div>
         ))}
         <div className="col-start-2 col-span-3 divide-y">
-        {/* {articles.map((article) => {
+        {articles.map((article) => {
             return (
                 <Link
                 href={`/blog/${article.attributes.slug}`}
@@ -102,9 +102,10 @@ export default function PostList({
                   <span className="w-[7rem] m-0 text-neutral-500 font-light dark:text-neutral-400 text-sm sm:text-right">{formatDate(article.attributes.publishedAt)}<span className="flex md:hidden"></span> </span>
                 </Link>
             );
-          })} */}
+          })}
         </div>
-      </div>
+      </div> */}
+      <p>Content coming soon, check back in a week</p>
       {children && children}
     </div>
   );
