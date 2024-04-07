@@ -60,7 +60,7 @@ export default function RootRoute() {
             <span>Library Scavenger Hunt</span>
           </div>
           <div className='rounded m-2 aspect-square'>
-            <Image src={getStrapiMedia('/uploads/Lib_Mockup_2f5ec0fdbd.png')} width={400} height={400} alt='surf' className='aspect-square w-full object-cover right-0 rounded-lg md:p-0 '/>
+            <Image src={getStrapiMedia('https://strapi-aws-s3-assets.s3.ap-southeast-2.amazonaws.com/Lib_Mockup_e77c580d97.png')} width={400} height={400} alt='surf' className='aspect-square w-full object-cover right-0 rounded-lg md:p-0 '/>
           </div>
         </Link>
       </div>
@@ -79,7 +79,7 @@ export default function RootRoute() {
         >
           <span className='font-body pb-2 pl-1 text-neutral-700 dark:text-neutral-400  line-clamp-2'>Thinking Fast and Slow</span>
             <div className='overflow-hidden w-1/3 object-scale-down m-auto'>
-              <Image src={getStrapiMedia('https://strapi-aws-s3-assets.s3.ap-southeast-2.amazonaws.com/61fdr_Eu_P_Jw_L_AC_UF_1000_1000_QL_80_0a3905c6f5.jpg')} width={100} height={200} alt='surf' className='w-full rounded-md'/>
+              <Image src={getStrapiMedia('https://strapi-aws-s3-assets.s3.ap-southeast-2.amazonaws.com/51_B_Rwod_Y4_IL_AC_UF_1000_1000_QL_80_84fab630b4.jpg')} width={100} height={200} alt='surf' className='w-full rounded-md'/>
             </div>
         </Link>
       </div>

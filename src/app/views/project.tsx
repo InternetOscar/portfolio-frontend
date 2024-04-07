@@ -3,11 +3,11 @@ import { postRenderer } from '@/app/utils/post-renderer';
 import Image from 'next/image';
 import Link from 'next/link';
 
-interface Project {
+interface ProjectDetail {
     id: number;
     attributes: {
         name: string;
-        description: string;
+        description: any[];
         url: string;
         product_a: string;
         product_b: string;
@@ -24,7 +24,7 @@ interface Project {
     };
 }
 
-export default function Project({ data }: { data: Project }) {
+export default function ProjectDetail({ data }: { data: ProjectDetail }) {
     const { name, description, url, cover, product_a, product_b, product_c } = data.attributes;
     const imageUrl = getStrapiMedia(data.attributes.cover.data.attributes.url)
     console.log(data)
@@ -42,7 +42,9 @@ export default function Project({ data }: { data: Project }) {
                         </p>
                     </div>
                 </div>
-                <p className='font-display font-light dark:text-white'>{description}</p>
+                <div className='font-display font-light dark:text-white'>
+                {description}
+                </div>
             </div>
             <div className='w-2/4 mx-auto'>
             {imageUrl && (

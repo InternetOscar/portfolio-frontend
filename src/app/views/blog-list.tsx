@@ -50,20 +50,49 @@ export default function PostList({
   data: Article[];
   children?: React.ReactNode;
 }) {
+  // basic variabels for the blog groups (overall years, formatted post content)
+  var years = []
+  var tidyPosts = []
+  // process the blog content to only provide necessary props
+  for (let p = 0; p < articles.length; p++) {
+    var postObj = {}
+    // console.log(articles[p].attributes.publishedAt.substring(0,4))
+    var year = parseInt(articles[p].attributes.publishedAt.substring(0,4))
+    years.push(year)
+    var title = articles[p].attributes.title
+    var link = articles[p].attributes.slug
+    var date = String(formatDate(articles[p].attributes.publishedAt))
+    console.log(title, link, date)
+    postObj = { ...postObj, "title": title, "link": link, "date": date, "year": year }
+    // console.log(postObj) 
+    tidyPosts.push(postObj)
+    // articles.filter()
+  }
+  // console.log(years)
+  let uniqueYearsSet = new Set(years)
+  let uniqueYears = Array.from(uniqueYearsSet)
+  console.log(uniqueYears)
+  console.log("Tidy Posts:",tidyPosts)
+  console.log("Example Date:", tidyPosts[0].date)
+
+  // const yearGroup = tidyPosts.filter(post => parseInt(post.year) == year)
+
+  console.log(yearGroup)
+
   return (
     <div className="font-body font-normal col-span-4 grid grid-cols-4 mt-8 divide-y divide-neutral-200 dark:divide-neutral-800 border-t border-neutral-200 dark:border-neutral-800">
       <div className="col-span-4 grid grid-cols-4">
-        <p className="text-sm p-4 m-0 dark:text-neutral-300">
-          2024
-        </p>
+        {uniqueYears.map(year => (
+          <div>
+          <p className="text-sm p-4 m-0 dark:text-neutral-300 text-blue-600">{year}</p>
+            <div>
+
+            </div>
+          </div>
+        ))}
         <div className="col-start-2 col-span-3 divide-y">
-        {articles.map((article) => {
-            const imageUrl = getStrapiMedia(
-              article.attributes.cover.data?.attributes.url
-            );
-
+        {/* {articles.map((article) => {
             return (
-
                 <Link
                 href={`/blog/${article.attributes.slug}`}
                 key={article.id}
@@ -73,16 +102,10 @@ export default function PostList({
                   <span className="w-[7rem] m-0 text-neutral-500 font-light dark:text-neutral-400 text-sm sm:text-right">{formatDate(article.attributes.publishedAt)}<span className="flex md:hidden"></span> </span>
                 </Link>
             );
-          })}
+          })} */}
         </div>
       </div>
-
-
-
-
-        {children && children}
-
+      {children && children}
     </div>
-
   );
 }
