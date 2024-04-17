@@ -86,7 +86,7 @@ export default function RootRoute() {
     </div>
     <div className='h-[500px] col-span-4  flex flex-center'>
           <div className='m-auto w-[200px] flex flex-col justify-center'>
-            <Image className="" src={getStrapiMedia("https://strapi-aws-s3-assets.s3.ap-southeast-2.amazonaws.com/avatar_fa24b1d38b.png")} alt='Memoji of Oscar Dobson-Brown' width={200} height={200}/>
+            <Image className="" src={getStrapiMedia("https://strapi-aws-s3-assets.s3.ap-southeast-2.amazonaws.com/avatar_2e103b1f70_5f2dc24030.webp")} alt='Memoji of Oscar Dobson-Brown' width={200} height={200}/>
             <p className='justify-center font-body text-center w-full dark:text-neutral-300 '>Built by Oscar.</p>
           </div>
         </div>
