@@ -35,11 +35,11 @@ export default function RootRoute() {
       <div className='col-span-1 row-span-1 aspect-square'>
         <Link
           className='col-span-1 row-span-1 md:col-span-1 aspect-square row-span-1 flex flex-col p-2 rounded-xl bg-neutral-200/50 dark:bg-neutral-800 dark:border-neutral-700 md:aspect-square border border-neutral-100 hover:border-neutral-300 dark:hover:border-neutral-500 transition-all'
-          href={`/books/thinking-fast-and-slow`}
+          href={`/books/shoe-dog`}
         >
-          <span className='font-body pb-2 pl-1 text-neutral-700 dark:text-neutral-400  line-clamp-2'>The 48 Laws of Power</span>
+          <span className='font-body pb-2 pl-1 text-neutral-700 dark:text-neutral-400  line-clamp-2'>Shoe Dog</span>
             <div className='overflow-hidden w-1/3 object-scale-down m-auto'>
-              <Image src={getStrapiMedia('https://strapi-aws-s3-assets.s3.ap-southeast-2.amazonaws.com/611_X8_GI_7hp_L_AC_UF_1000_1000_QL_80_d3d2b140ca.jpg')} width={100} height={200} alt='surf' className='w-full rounded-md'/>
+              <Image src={getStrapiMedia('https://strapi-aws-s3-assets.s3.ap-southeast-2.amazonaws.com/717_L_Hu_Yp7u_L_AC_UF_1000_1000_QL_80_050de4becf.jpg')} width={100} height={200} alt='surf' className='w-full rounded-md'/>
             </div>
         </Link>
       </div>
