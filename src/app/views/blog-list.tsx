@@ -134,96 +134,25 @@ export default function PostList(
     }
   }
 
-  /*} target output
-  REACHED THE TARGET OUTPUT SO HAPPY WITH IT NOW
-  TODO: Make the damn thing output the right way on the web page
-  [
-    {
-      "year": "XXXX",
-      "posts": [
-        {
-          "title": "Title 6",
-          "publishedAt": "Mar 28",
-          "link": "/article-one"
-        }, {
-          "title": "Title 5",
-          "publishedAt": "Mar 25",
-          "link": "/article-two"
-        }, {
-          "title": "Title 4",
-          "publishedAt": "Mar 20",
-          "link": "/article-three"
-        },
-      ]
-    }, {
-      "year": "XXXX",
-      "posts": [
-        {
-          "title": "Title 3",
-          "publishedAt": "Dec 28",
-          "link": "/article-one"
-        }, {
-          "title": "Title 2",
-          "publishedAt": "Dec 20",
-          "link": "/article-two"
-        }, {
-          "title": "Title 1",
-          "publishedAt": "Dec 11",
-          "link": "/article-three"
-        },
-      ]
-    },
-  ]*/
+
   console.log("main group", mainGroup, "years", mainGroup.length)
 
 
   return (
     <div className="font-body font-normal col-span-4 grid grid-cols-4 mt-8 border-neutral-200 dark:border-neutral-800 dark:text-neutral-300">
-      {/* <div className="col-span-4 grid grid-cols-4">
-        {uniqueYears.map(year => (
-          <div
-            className="col-start-1 col-span-1 border-t"
-            key={year}
-          >
-            <p className="flex text-sm p-4 m-0 dark:text-neutral-300 text-blue-600">{year}</p>
-          </div>
-        ))}
-        <div className="row-start-1 col-start-2 col-span-3 divide-y flex-col">
-          {articles.map((article) => {
-              return (
-                  <Link
-                  href={`/blog/${article.attributes.slug}`}
-                  key={article.id}
-                  className="border-t flex transition-colors decoration-neutral-300 hover:decoration-neutral-400 dark:decoration-neutral-700 dark:hover:decoration-neutral-600 flex flex-col no-underline  sm:flex-row sm:items-center gap-1 sm:gap-4 justify-between p-4"
-                  >
-                    <span className="">{article.attributes.title}</span>
-                    <span className="w-[7rem] m-0 text-neutral-500 font-light dark:text-neutral-400 text-sm sm:text-right">{formatDate(article.attributes.publishedAt)}<span className="flex md:hidden"></span> </span>
-                  </Link>
-              );
-          })}
-        </div>
-      </div> */}
-
-      <div className="col-span-4 grid grid-cols-4">
-        {mainGroup.map(({year, posts}, i) => (
-        <div className="col-start-1 col-span-1 border-t dark:border-neutral-800" key={i}>
-          <p className="flex text-sm col-span-1 p-4 m-0 dark:text-neutral-300 text-blue-600">{year}</p>
-        </div>
-        ))}
-        {posts.map((post, j) => (
+      <>
+      {posts.slice(1).map((post, j) => (
           <Link
           href={`/blog/${post.link}`}
           key={j}
-          className="border-t dark:border-neutral-800 dark:hover:bg-neutral-800 col-start-2 col-span-3 flex transition-colors decoration-neutral-300 hover:decoration-neutral-400 dark:decoration-neutral-700 dark:hover:decoration-neutral-600 flex flex-col no-underline  sm:flex-row sm:items-center gap-1 sm:gap-4 justify-between p-4 transition-all"
+          className="border-t dark:border-neutral-800 dark:hover:bg-neutral-800 col-span-4 flex transition-colors decoration-neutral-300 hover:decoration-neutral-400 dark:decoration-neutral-700 dark:hover:decoration-neutral-600 flex flex-col no-underline  sm:flex-row sm:items-center gap-1 sm:gap-4 justify-between p-4 transition-all"
           >
             <span>{post.title}</span>
             <span className={`-[7rem] m-0 text-neutral-500 font-light dark:text-neutral-400 text-sm sm:text-right row-start`}>{post.date}</span>
           </Link>
           )
         )}
-
-
-      </div>
+      </>
 
 
 
