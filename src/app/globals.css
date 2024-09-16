@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&display=swap");
+
 h2 {
 	font-size: 1.5rem;
 	padding-top: 1rem;
