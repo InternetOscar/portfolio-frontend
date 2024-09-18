@@ -31,9 +31,9 @@ export default function Navbar() {
       })}
       </div>
       <div className="md:flex-row font-light font-body justify-end align-middle  pb-[40px] text-neutral-400 z-1 md:flex hidden">
-        <Link className="mx-3 hover:text-neutral-800 transition-all mt-[-4px]" target="_blank" href="https://threads.net/oscar.dobsonbrown">Threads</Link>
-        <Link className="mx-3 hover:text-neutral-800 transition-all mt-[-4px]" target="_blank" href="https://github.com/internetoscar">GitHub</Link>
-        <Link className="mx-3 hover:text-neutral-800 transition-all mt-[-4px]" target="_blank" href="https://read.cv/oscardb">CV</Link>
+        <Link className="mx-3 hover:text-neutral-800 transition-all mt-[-4px] cursor-alias" target="_blank" href="https://threads.net/oscar.dobsonbrown">Threads</Link>
+        <Link className="mx-3 hover:text-neutral-800 transition-all mt-[-4px] cursor-alias" target="_blank" href="https://github.com/internetoscar">GitHub</Link>
+        <Link className="mx-3 hover:text-neutral-800 transition-all mt-[-4px] cursor-alias" target="_blank" href="https://read.cv/oscardb">CV</Link>
       </div>
     </div>
   );
