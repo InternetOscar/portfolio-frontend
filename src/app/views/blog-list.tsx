@@ -145,7 +145,7 @@ export default function PostList(
           <Link
           href={`/blog/${post.link}`}
           key={j}
-          className="border-t dark:border-neutral-800 dark:hover:bg-neutral-800 col-span-4 flex transition-colors decoration-neutral-300 hover:decoration-neutral-400 dark:decoration-neutral-700 dark:hover:decoration-neutral-600 flex flex-col no-underline  sm:flex-row sm:items-center gap-1 sm:gap-4 justify-between p-4 transition-all"
+          className="border-t dark:border-neutral-800 dark:hover:bg-neutral-800 hover:bg-neutral-100 col-span-4 flex transition-colors decoration-neutral-300 hover:decoration-neutral-400 dark:decoration-neutral-700 dark:hover:decoration-neutral-600 flex flex-col no-underline  sm:flex-row sm:items-center gap-1 sm:gap-4 justify-between p-4 transition-all"
           >
             <span>{post.title}</span>
             <span className={`-[7rem] m-0 text-neutral-500 font-light dark:text-neutral-400 text-sm sm:text-right row-start`}>{post.date}</span>
