@@ -1,7 +1,7 @@
 import React from 'react';
 import Markdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { nightOwl } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 interface RichTextProps {
   data: {
@@ -35,6 +35,7 @@ export default function RichText({ data }: RichTextProps) {
             ),
             strong: ({ node, ...props }) => <p className="font-work-sans font-semibold mb-4 text-neutral-600 dark:text-neutral-300 leading-relaxed" {...props} />,
             p: ({ node, ...props }) => <p className="font-work-sans mb-4 text-neutral-600 dark:text-neutral-300 leading-relaxed" {...props} />,
+            a: ({ node, ...props }) => <a className="font-work-sans mb-4 text-blue-600 dark:text-neutral-500 leading-relaxed" {...props} />,
             pre: ({ node, ...props }) => (
               <pre style={{fontFamily: "'Martian Mono', monospace"}} className="mb-4 text-neutral-600 dark:text-neutral-300 leading-relaxed font-light dark:bg-neutral-800" {...props} />
             ),
@@ -42,7 +43,7 @@ export default function RichText({ data }: RichTextProps) {
               const match = /language-(\w+)/.exec(className || '');
               return !inline && match ? (
                 <SyntaxHighlighter
-                  style={{...atomDark, ...customStyle}}
+                  style={{...nightOwl, ...customStyle}}
                   language={match[1]}
                   PreTag="div"
                   className="rounded-md mb-4 text-sm "
