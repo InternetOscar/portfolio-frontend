@@ -20,23 +20,23 @@ const customStyle = {
 
 export default function RichText({ data }: RichTextProps) {
   return (
-    <section className="rich-text dark:text-gray-200">
+    <section className="rich-text dark:text-neutral-200">
       <div className="prose prose-lg dark:bg-neutral-900 rounded-lg">
         <Markdown
           components={{
             h1: ({ node, ...props }) => (
-              <h1 className="font-display text-3xl font-bold mb-4 text-gray-900 dark:text-gray-100" {...props} />
+              <h1 className="font-display text-3xl font-bold mb-4 text-neutral-900 dark:text-neutral-100" {...props} />
             ),
             h2: ({ node, ...props }) => (
-              <h2 className="font-display text-2xl font-semibold mt-6 mb-3 text-gray-800 dark:text-gray-200" {...props} />
+              <h2 className="font-display text-2xl font-semibold mt-6 mb-3 text-neutral-800 dark:text-neutral-200" {...props} />
             ),
             h3: ({ node, ...props }) => (
-              <h3 className="font-display text-xl font-semibold mt-5 mb-2 text-gray-700 dark:text-gray-300" {...props} />
+              <h3 className="font-display text-xl font-semibold mt-5 mb-2 text-neutral-700 dark:text-neutral-300" {...props} />
             ),
-            strong: ({ node, ...props }) => <p className="font-work-sans font-semibold mb-4 text-gray-600 dark:text-gray-300 leading-relaxed" {...props} />,
-            p: ({ node, ...props }) => <p className="font-work-sans mb-4 text-gray-600 dark:text-gray-300 leading-relaxed" {...props} />,
+            strong: ({ node, ...props }) => <p className="font-work-sans font-semibold mb-4 text-neutral-600 dark:text-neutral-300 leading-relaxed" {...props} />,
+            p: ({ node, ...props }) => <p className="font-work-sans mb-4 text-neutral-600 dark:text-neutral-300 leading-relaxed" {...props} />,
             pre: ({ node, ...props }) => (
-              <pre style={{fontFamily: "'Martian Mono', monospace"}} className="mb-4 text-gray-600 dark:text-gray-300 leading-relaxed font-light dark:bg-neutral-800" {...props} />
+              <pre style={{fontFamily: "'Martian Mono', monospace"}} className="mb-4 text-neutral-600 dark:text-neutral-300 leading-relaxed font-light dark:bg-neutral-800" {...props} />
             ),
             code: ({ node, inline, className, children, ...props }) => {
               const match = /language-(\w+)/.exec(className || '');
@@ -60,7 +60,7 @@ export default function RichText({ data }: RichTextProps) {
                   {String(children).replace(/\n$/, '')}
                 </SyntaxHighlighter>
               ) : (
-                <code style={{fontFamily: "'Martian Mono', monospace"}} className="bg-neutral-200 dark:bg-neutral-800 rounded-md px-2 py-1 text-sm text-gray-800 dark:text-gray-200 font-light" {...props}>
+                <code style={{fontFamily: "'Martian Mono', monospace"}} className="bg-neutral-200 dark:bg-neutral-800 rounded-md px-2 py-1 text-sm text-neutral-800 dark:text-neutral-200 font-light" {...props}>
                   {children}
                 </code>
               );
