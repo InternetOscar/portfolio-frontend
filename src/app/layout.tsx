@@ -42,6 +42,7 @@ export default async function RootLayout({
       <head>
         {/* <title>Oscar Dobson-Brown — Web Developer</title> */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <script defer src="https://cloud.umami.is/script.js" data-website-id="a60c2af0-3562-4e2a-b5bc-520dce7a7499"></script>
         {/* <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
         <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inclusive+Sans:ital@0;1&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/> */}
