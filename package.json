@@ -20,21 +20,27 @@
 		"@vercel/analytics": "^1.2.2",
 		"@vercel/speed-insights": "^1.0.10",
 		"classnames": "^2.3.2",
+		"grey-matter": "^0.0.0",
 		"negotiator": "^0.6.3",
 		"next": "^14.1.0",
 		"qs": "^6.11.2",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-icons": "^4.11.0",
-		"react-markdown": "^9.0.0",
+		"react-markdown": "^9.0.1",
 		"react-slideshow-image": "^4.3.0",
+		"react-syntax-highlighter": "^15.6.1",
+		"remark": "^15.0.1",
 		"remark-gfm": "^4.0.0",
+		"remark-html": "^16.0.1",
+		"remark-smartypants": "^3.0.2",
 		"tailwind-merge": "^2.2.1",
 		"typescript": "5.2.2"
 	},
 	"devDependencies": {
+		"@tailwindcss/typography": "^0.5.15",
 		"autoprefixer": "^10.4.16",
 		"postcss": "^8.4.31",
-		"tailwindcss": "^3.4"
+		"tailwindcss": "^3.4.11"
 	}
 }

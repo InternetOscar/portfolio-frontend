@@ -19,7 +19,7 @@ const nextConfig = {
 			},
 			{
 				protocol: "https",
-				hostname: "bookshop.ge",
+				hostname: "strapi-aws-s3-assets.s3.ap-southeast-2.amazonaws.com",
 			},
 			{
 				protocol: "https",

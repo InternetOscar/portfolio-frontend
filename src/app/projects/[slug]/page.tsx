@@ -1,6 +1,5 @@
-import { fetchAPI } from '@/app/[lang]/utils/fetch-api';
-import Project from '@/app/[lang]/views/project';
-// import Post from '@/app/[lang]/views/project';
+import { fetchAPI } from '@/app/utils/fetch-api';
+import Project from '@/app/views/project';
 import type { Metadata } from 'next';
 
 async function getPostBySlug(slug: string) {

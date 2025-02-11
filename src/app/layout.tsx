@@ -3,7 +3,7 @@ import "./globals.css";
 import { getStrapiMedia, getStrapiURL } from "./utils/api-helpers";
 import { fetchAPI } from "./utils/fetch-api";
 
-import { i18n } from "../../../i18n-config";
+import { i18n } from "../../i18n-config";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 
@@ -24,18 +24,10 @@ const work = Work_Sans({
   variable: '--font-work',
 })
 
-
-const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-inter',
-})
-
-const roboto_mono = Roboto_Mono({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-roboto-mono',
-})
+export const metadata: Metadata = {
+  title: 'Oscar Dobson-Brown - Web Developer in Perth',
+  description: '...'
+}
 
 export default async function RootLayout({
   children,
@@ -46,9 +38,11 @@ export default async function RootLayout({
 }) {
 
   return (
-    <html lang={params.lang} className={`${inter.variable} ${roboto_mono.variable} ${fraunces.variable} ${work.variable}`}>
+    <html lang='en' className={`${fraunces.variable} ${work.variable}`}>
       <head>
+        {/* <title>Oscar Dobson-Brown — Web Developer</title> */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <script defer src="https://cloud.umami.is/script.js" data-website-id="a60c2af0-3562-4e2a-b5bc-520dce7a7499"></script>
         {/* <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous"/>
         <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inclusive+Sans:ital@0;1&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/> */}
@@ -61,7 +55,7 @@ export default async function RootLayout({
         </main>
 
         <Footer></Footer>
-        <Analytics/>
+        {/* <Analytics/> */}
         <SpeedInsights/>
       </body>
     </html>
